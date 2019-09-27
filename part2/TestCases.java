@@ -26,6 +26,35 @@ public class TestCases
       assertEquals(1.0, new Point(1.0, 2.0).getX(), DELTA);
    }
 
+   @Test
+   public void testGetY()
+   {
+      assertEquals(-1.0, new Point(1.0, -1.0).getY(), DELTA);
+   }
+
+   @Test
+   public void testRadius()
+   {
+      assertEquals(1.0, new Point(1.0, 0).getRadius(), DELTA);
+   }
+
+   @Test
+   public void testAngle()
+   {
+      assertEquals(0.7853981, new Point(1.0, 1.0).getAngle(), DELTA); 
+   }
+ 
+   @Test
+   public void testRotate()
+   {
+      //make variables to hold new x and y then compare to old
+      Point p = new Point(1.0, 1.0);
+      Point q = p.rotate90();
+      assertEquals(-1.0, q.getX(), DELTA);
+      assertEquals(1.0, q.getY(), DELTA); //fix
+   }
+ 
+
    /*
     * The tests below here are to verify the basic requirements regarding
     * the "design" of your class.  These are to remain unchanged.
