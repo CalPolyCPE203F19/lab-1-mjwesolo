@@ -1,6 +1,5 @@
-/*
- * This file should remain unchanged.
- */
+//This file should remain unchanged.
+
 class Course
 {
    private final String name;
