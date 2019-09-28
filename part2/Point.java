@@ -21,6 +21,12 @@ class Point
    public double getAngle()
    {
       double angle = Math.atan(y/x);
+      if(x < 0 && y > 0)
+         return angle + (Math.PI/2);
+      if (x < 0 && y < 0)
+         return angle + (Math.PI);
+      if (x > 0 && y < 0)
+         return angle + (3*Math.PI/2);
       return angle;
    }
 
